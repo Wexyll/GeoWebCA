@@ -3,7 +3,7 @@ CA1 - Geo Web Mapping
 
 Images of Local site working:
 
-Login Page
+Home Page
 ![image](https://user-images.githubusercontent.com/55672334/200960225-3efcc3a3-7850-4892-bb95-e864f3555a05.png)
 
 Map
