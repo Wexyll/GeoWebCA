@@ -6,7 +6,7 @@ User = get_user_model()
 
 
 class UserLoginForm(AuthenticationForm):
-    username = forms.EmailField(label='E-Mail Address', widget=forms.EmailInput())
+    username = forms.EmailField(label='E-Mail Address', widget=forms.EmailInput(attrs={'class': 'form-control'}))
     password = forms.CharField(label='Password', widget=forms.PasswordInput(attrs={'class': 'form-control'}))
 
 

@@ -147,12 +147,12 @@ SECRET_KEY = config('SECRET_KEY', default=None)
 DEPLOY_SECURE = config('DEPLOY_SECURE', default=False, cast=bool)
 
 
-if socket.gethostname() == "DESKTOP-OHQFHS1":
-    DATABASES["default"]["HOST"] = "localhost"
-    DATABASES["default"]["PORT"] = 25432
-else:
-    DATABASES["default"]["HOST"] = "wmap-postgis"
-    DATABASES["default"]["PORT"] = 5432
+# if socket.gethostname() == "DESKTOP-OHQFHS1":
+#     DATABASES["default"]["HOST"] = "localhost"
+#     DATABASES["default"]["PORT"] = 25432
+# else:
+#     DATABASES["default"]["HOST"] = "wmap-postgis"
+#     DATABASES["default"]["PORT"] = 5432
 
 # Set DEPLOY_SECURE to True only for LIVE deployment
 if DEPLOY_SECURE:

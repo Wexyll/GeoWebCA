@@ -8,5 +8,6 @@ urlpatterns = [
     path('register/', user_register, name='register'),
 
     path('update_location/', update_location, name="update_location"),
+    path('update_satellite/', update_satellite, name="update_satellite"),
     path('', world, name='world'),
 ]

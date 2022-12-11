@@ -45,6 +45,8 @@ class User(AbstractBaseUser):
     admin = models.BooleanField(default=False, editable=True)
     date_joined = models.DateTimeField(verbose_name='Date Joined', default=timezone.now)
     last_location = models.PointField(verbose_name='Last Location', srid=4326, null=True, blank=True)
+    last_satId = models.CharField(verbose_name="Last Satellite ID", max_length=200, null=True, blank=True)
+    last_satLocation = models.PointField(verbose_name='Last Satellite Location', srid=4326, null=True, blank=True)
 
     # password field is already built-in
     # email and password are required by default

@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container box-element">
+
+
+<div class="container py-5">
 <form method="POST" action="">
     {% csrf_token %}
     {{form.as_p}}
-    <button type="submit" class="btn btn-primary btn-block">Login</button>
+    <button type="submit" class="btn btn-btn-secondary btn-block bg-white">Login</button>
 </form>
 </div>
 {% endblock %}

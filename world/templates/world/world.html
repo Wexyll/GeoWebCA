@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+
 {% load static %}
 
 {% block title %}
@@ -7,4 +8,20 @@
 
 {% block content %}
     <div id="map"></div>
+    <div class="text-center text-lg-start fixed-bottom py-6" style="background-color: #232b2b;">
+    <div class="container">
+        <div class="text-center py-3">
+            <div id="search">
+                <input class="form-control mb-5" type="text" id="input" placeholder="Starlink ID">
+
+{#            <button class="btn btn-secondary" id="submit">Submit</button>#}
+            </div>
+        </div>
+    </div>
+
+  <div class="input-group">
+  </div>
+</div>
+
+</div>
 {% endblock %}

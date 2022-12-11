@@ -1,4 +1,5 @@
 import json
+import requests
 
 from django.contrib import messages
 from django.contrib.auth import login, logout
@@ -72,3 +73,20 @@ def update_location(request):
     request.user.refresh_from_db()
 
     return JsonResponse('Item Added', safe=False)
+
+
+def update_satellite(request):
+    data = json.loads(request.body)
+    satId = data['satId']
+    lat = data['latitude']
+    lng = data['longitude']
+
+    request.user.last_satLocation = Point(lng, lat)
+
+
+    request.user.last_satId = satId
+
+    request.user.save()
+    request.user.refresh_from_db()
+
+    return JsonResponse('Satellite Added', safe=False)
